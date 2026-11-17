@@ -1,4 +1,3 @@
-<!-- Force GitHub Pages rebuild -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +7,9 @@
 <title>Research | ISPOR Europe 2026</title>
 
 <style>
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -25,7 +26,7 @@ header {
 }
 
 .container {
-  max-width: 850px;
+  max-width: 1100px;
   margin: auto;
   padding: 0 24px;
 }
@@ -59,12 +60,23 @@ h2 {
   line-height: 1.45;
 }
 
+/* TWO-COLUMN POSTER LAYOUT */
+
+.poster-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
 .poster {
   background: white;
   border: 1px solid #e1e7ef;
   border-radius: 10px;
   padding: 28px;
   margin: 22px 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .number {
@@ -89,6 +101,11 @@ a:hover {
   text-decoration: underline;
 }
 
+.poster a {
+  margin-top: auto;
+  padding-top: 18px;
+}
+
 footer {
   border-top: 1px solid #e1e7ef;
   padding: 25px 0;
@@ -96,9 +113,27 @@ footer {
   font-size: 13px;
 }
 
+/* MOBILE RESPONSIVENESS */
+
+@media(max-width:700px) {
+  .poster-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
 @media(max-width:600px) {
-  h1 { font-size: 28px; }
-  .poster { padding: 22px; }
+  h1 {
+    font-size: 28px;
+  }
+
+  .poster {
+    padding: 22px;
+  }
+
+  header {
+    padding: 45px 24px;
+  }
 }
 </style>
 </head>
@@ -107,6 +142,7 @@ footer {
 
 <header>
   <div class="container">
+
     <div class="eyebrow">
       RESEARCH · ISPOR EUROPE 2026
     </div>
@@ -120,6 +156,7 @@ footer {
       Intelligence in health economic evaluation
       and healthcare technology adoption.
     </p>
+
   </div>
 </header>
 
@@ -127,63 +164,79 @@ footer {
 
   <h2>Research Posters</h2>
 
-  <article class="poster">
-    <div class="number">POSTER 01</div>
+  <div class="poster-grid">
 
-    <h2>
-      Mapping Foundational Decision-AI Methods
-      in Health Economic Evaluation: A Scoping Review
-    </h2>
+    <!-- POSTER 01 -->
 
-    <p class="meta">
-      ISPOR Europe 2026 · Poster Presentation
-    </p>
+    <article class="poster">
 
-    <p>
-      A scoping review mapping foundational
-      Decision-AI methods in health economic evaluation.
-    </p>
+      <div class="number">POSTER 01</div>
 
-    <a href="https://www.ispor.org/heor-resources/presentations-database/presentation-cti/ispor-europe-2026/poster-session-3-4/mapping-foundational-decision-ai-methods-in-health-economic-evaluation-a-scoping-review"
-       target="_blank" rel="noopener">
-       View poster and abstract on ISPOR →
-    </a>
-  </article>
+      <h2>
+        Mapping Foundational Decision-AI Methods
+        in Health Economic Evaluation: A Scoping Review
+      </h2>
 
-  <article class="poster">
-    <div class="number">POSTER 02</div>
+      <p class="meta">
+        ISPOR Europe 2026 · Poster Presentation
+      </p>
 
-    <h2>
-      A Multi-Scale Classical AI Framework for
-      System-Level Value Assessment of Health
-      Technology Adoption
-    </h2>
+      <p>
+        A scoping review mapping foundational
+        Decision-AI methods in health economic evaluation.
+      </p>
 
-    <p class="meta">
-      ISPOR Europe 2026 · Poster Presentation
-    </p>
+      <a href="https://www.ispor.org/heor-resources/presentations-database/presentation-cti/ispor-europe-2026/poster-session-3-4/mapping-foundational-decision-ai-methods-in-health-economic-evaluation-a-scoping-review"
+         target="_blank" rel="noopener">
+         View poster and abstract on ISPOR →
+      </a>
 
-    <p>
-      A framework integrating probabilistic inference,
-      sequential decision-making and symbolic reasoning
-      to assess health technology adoption.
-    </p>
+    </article>
 
-    <a href="https://www.ispor.org/heor-resources/presentations-database/presentation-cti/ispor-europe-2026/poster-session-3-4/a-multi-scale-classical-ai-framework-for-system-level-value-assessment-of-health-technology-adoption"
-       target="_blank" rel="noopener">
-       View poster and abstract on ISPOR →
-    </a>
-  </article>
+    <!-- POSTER 02 -->
+
+    <article class="poster">
+
+      <div class="number">POSTER 02</div>
+
+      <h2>
+        A Multi-Scale Classical AI Framework for
+        System-Level Value Assessment of Health
+        Technology Adoption
+      </h2>
+
+      <p class="meta">
+        ISPOR Europe 2026 · Poster Presentation
+      </p>
+
+      <p>
+        A framework integrating probabilistic inference,
+        sequential decision-making and symbolic reasoning
+        to assess health technology adoption.
+      </p>
+
+      <a href="https://www.ispor.org/heor-resources/presentations-database/presentation-cti/ispor-europe-2026/poster-session-3-4/a-multi-scale-classical-ai-framework-for-system-level-value-assessment-of-health-technology-adoption"
+         target="_blank" rel="noopener">
+         View poster and abstract on ISPOR →
+      </a>
+
+    </article>
+
+  </div>
 
 </main>
 
 <footer>
   <div class="container">
+
     ISPOR Europe 2026 · Research Portfolio
+
     <br>
+
     <a href="https://asarmah123.github.io/ai-health-evidence-monitor/">
       AI in Health – Evidence Monitor
     </a>
+
   </div>
 </footer>
 
